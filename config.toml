@@ -1,0 +1,7 @@
+baseURL = 'http://cjmakes.com/'
+languageCode = 'en-us'
+title = 'conjones'
+theme = "PaperMod"
+
+[params]
+defaultTheme = "auto"
