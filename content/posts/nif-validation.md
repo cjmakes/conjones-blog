@@ -8,7 +8,6 @@ tags:
   - Portugal
 ---
 
-# Validate a NIF
 Número De Identificação Fiscal or NIF, is the nine digit number which is used to identify a tax paying entity in Portugal. Any NIF can be validated using the [mod 11 algorithm](http://www.pgrocer.net/Cis51/mod11.html) with one twist. I will describe what that twist is and how it affects validating a NIF.
 
 When you buy anything in Portugal, in person or online, you give your NIF. This includes everything from the 100€ you spend on your mall haul, to the 2€ you spend on an espresso and a pastel de nata.
