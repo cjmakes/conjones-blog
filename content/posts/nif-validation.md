@@ -16,7 +16,7 @@ This number is relayed often so mistakes are very possible. Possible causes are 
 
 $$ \text{let } nif =  n\_9n\_8n\_7n\_6n\_5n\_4n\_3n\_2n\_1$$
 $$ nif \text{ is valid if and only if}$$
-$$ \sum\_{i = 1}^{8} i\cdot n\_i \equiv 0 \pmod{11}$$
+$$ \sum\_{i = 1}^{9} i\cdot n\_i \equiv 0 \pmod{11}$$
 
 Said differently, enumerate the digits from right to left, and sum each number multiplied by it's index. The result modulo 11 should be 0.
 
