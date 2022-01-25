@@ -14,8 +14,8 @@ When you buy anything in Portugal, in person or online, you give your NIF. This 
 
 This number is relayed often so mistakes are very possible. Possible causes are bit flips during transmission when buying online — or mispronouncing seis as sete. To address this, an algorithm exists to determine if any give series of nine digits is a valid NIF. It can be defined as:
 
-$$ \text{let } n\_i \text{be the }i\text{th digit of the NIF as numbered from right to left. Then a NIF is valid if:}$$
-
+$$ \text{let } nif =  n\_9n\_8n\_7n\_6n\_5n\_4n\_3n\_2n\_1$$
+$$ nif \text{ is valid if and only if}$$
 $$ \sum\_{i = 1}^{8} i\cdot n\_i \equiv 0 \pmod{11}$$
 
 Said differently, enumerate the digits from right to left, and sum each number multiplied by it's index. The result modulo 11 should be 0.
@@ -30,7 +30,7 @@ bd_impl a = if a == 0
 bd num = unfoldr bd_impl num
 -- Sum all numbers times their position
 ps_mult tup = ((fst tup) * (snd tup))
-ps num = foldl (+) 0 (map ps_mult (zip (bd num) [2..]))
+ps num = foldl (+) 0 (map ps_mult (zip (bd num) [1..]))
 validate nif = if ((mod (ps nif) 11) == 0)
   then putStrLn "valid"
   else putStrLn "not valid"
